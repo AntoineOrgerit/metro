@@ -105,22 +105,22 @@ function loadItinerary() {
         let stepListElement = $("#stepList");
         let liHtml = "";
         let tmp = "";
-        for (var i =0;i<etapes.length;i++) {
-            if (i !== 0 && i !== etapes.length - 1) {
-                tmp =  "<li style='list-style-type: circle'>" + etapes[i] + "</li>";
-                liHtml = liHtml + tmp;
-            }
-
-        }
-
-        stepListElement.html(liHtml);
 
         if (etapes !== null) {
+            for (var i =0;i<etapes.length;i++) {
+                if (i !== 0 && i !== etapes.length - 1) {
+                    tmp =  "<li style='list-style-type: circle'>" + etapes[i] + "</li>";
+                    liHtml = liHtml + tmp;
+                }
+
+            }
+
+            stepListElement.html(liHtml);
+
+
             $("#time").html(etapes.length * 2 - 2 + " min");
+            $("#result").css('display', "block");
         }
-
-
-        $("#result").css('display', "block");
 
     } else {
         let stack ="Impossible de charger l'itinéraire.";
