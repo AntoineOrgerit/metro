@@ -7,3 +7,9 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+
+#mapid {
+    height: 300px;
+    margin: 0 10px;
+}
