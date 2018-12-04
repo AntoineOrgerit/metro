@@ -103,7 +103,7 @@ var Graph = (function (undefined) {
 
 			start = end;
 		}
-	}
+	};
 
 	var toArray = function (list, offset) {
 		try {
@@ -122,28 +122,16 @@ var Graph = (function (undefined) {
 	}
 
 	Graph.prototype.findShortestPath = function (start, end) {
-	var chemins = [];
-	this.map.forEach(function (_map) {
 
-		var chemin = findShortestPath(_map, [start, end]);
-		if (chemin) {
-			chemins.push(chemin);
-		}
- 	});
-
-	// traitement chemins
-	//	...
-	/**
+		var _map = this.map.graph;
 		if (Object.prototype.toString.call(start) === '[object Array]') {
-			return findShortestPath(this.map, start);
+			return findShortestPath(_map, start);
 		} else if (arguments.length === 2) {
-			return findShortestPath(this.map, [start, end]);
+			return findShortestPath(_map, [start, end]);
 		} else {
-			return findShortestPath(this.map, toArray(arguments));
+			return findShortestPath(_map, toArray(arguments));
 		}
-	 **/
-		return chemins[0];
-	}
+	};
 
 	Graph.findShortestPath = function (map, start, end) {
 		if (Object.prototype.toString.call(start) === '[object Array]') {
