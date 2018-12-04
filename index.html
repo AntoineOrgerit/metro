@@ -34,13 +34,10 @@
         <div class="row">
             <div class="col s12">
                 <ul id="dropdownDep" class="dropdown-content">
-                    <li><a href="#!">one</a></li>
-                    <li class="divider" tabindex="-1"></li>
-                    <li><a href="#!">two</a></li>
-                    <li class="divider" tabindex="-1"></li>
-                    <li><a href="#!">three</a></li>
+
                 </ul>
-                <a class="btn dropdown-trigger col s12 red darken-1" href="#!" data-target="dropdownDep">Station de
+                <a class="btn dropdown-trigger col s12 red darken-1" id="dropdownDepTitle" href="#!"
+                   data-target="dropdownDep">Station de
                     départ</a>
             </div>
         </div>
@@ -51,13 +48,10 @@
         <div class="row">
             <div class="col s12">
                 <ul id="dropdownArr" class="dropdown-content">
-                    <li><a href="#!">one</a></li>
-                    <li class="divider" tabindex="-1"></li>
-                    <li><a href="#!">two</a></li>
-                    <li class="divider" tabindex="-1"></li>
-                    <li><a href="#!">three</a></li>
+
                 </ul>
-                <a class="btn dropdown-trigger col s12 red darken-1" href="#!" data-target="dropdownArr">Station
+                <a class="btn dropdown-trigger col s12 red darken-1" id="dropdownArrTitle" href="#!"
+                   data-target="dropdownArr">Station
                     d'arrivée</a>
             </div>
         </div>
@@ -65,7 +59,7 @@
 
     <!-- Bouton valider formulaire -->
     <div class="row center">
-        <p class="waves-effect waves-light btn red lighten-2">Rechercher !</p>
+        <p class="waves-effect waves-light btn red lighten-2" onclick="loadItinerary()">Rechercher !</p>
     </div>
 
     <!-- Resultat -->
@@ -75,7 +69,11 @@
                 <div class="card-content white-text">
                     <span class="card-title">Résultats</span>
                     <p>Station départ : <span id="station_dep">Gare St Lazare</span></p>
-                    <div>Étapes : </div>
+                    <div>Étapes :
+                        <ul id="stepList">
+                            <li style="list-style-type: circle">TEST</li>
+                        </ul>
+                    </div>
                     <p>Station arrivée : <span id="station_arr">Gare de l'Est</span></p>
                     <p>Temps : 15min</p>
                 </div>
@@ -97,10 +95,6 @@
 </footer>
 
 </body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="graph/graph.js"></script>
-<script src="js/index.js"></script>
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -115,6 +109,13 @@
 
 <!-- Script main -->
 <script src="js/index.js"></script>
+<script src="graph/graph.js"></script>
 <script src="js/map.js"></script>
+<script>
 
+    function loadItinerary() {
+        this.addItineary();
+    }
+
+</script>
 </html>
