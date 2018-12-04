@@ -63,7 +63,7 @@ const Graph = (function (param) {
         }
 
     };
-
+    // modifier pour retourner le numero de ligne
     let extractShortest = function (predecessors, end) {
         let nodes = [],
             u = end;
