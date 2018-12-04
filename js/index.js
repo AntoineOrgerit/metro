@@ -105,9 +105,9 @@ function loadItinerary() {
         let stepListElement = $("#stepList");
         let liHtml = "";
         let tmp = "";
-        for (var etape in etapes) {
-            if (etape !== 0 && etape !== etapes.length - 1) {
-                tmp =  "<li style='list-style-type: circle'>" + etapes[etape] + "</li>";
+        for (var i =0;i<etapes.length;i++) {
+            if (i !== 0 && i !== etapes.length - 1) {
+                tmp =  "<li style='list-style-type: circle'>" + etapes[i] + "</li>";
                 liHtml = liHtml + tmp;
             }
 
