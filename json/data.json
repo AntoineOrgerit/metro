@@ -2,158 +2,196 @@
   "graph": {
     "Chatelet": {
       "Hotel de Ville": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Gare de Lyon": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       }
     },
     "Hotel de Ville": {
       "Chatelet": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Rambuteau": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Rambuteau": {
       "Hotel de Ville": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Arts et Metier": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Arts et Metier": {
       "Rambuteau": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Republique": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Republique": {
       "Arts et Metier": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Goncourt": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Goncourt": {
       "Republique": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Belleville": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Belleville": {
       "Goncourt": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Pyrennees": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Pyrennees": {
       "Belleville": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Jourdain": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Jourdain": {
       "Pyrennees": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Place des fetes": {
       "Jourdain": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Telegraphe": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Telegraphe": {
       "Place des fetes": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Porte des Lilas": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Porte des lilas": {
       "Telegraphe": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       },
       "Mairie des Lilas": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Mairie des Lilas": {
       "Porte des Lilas": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "11"
       }
     },
     "Saint-Lazare": {
       "Madeleine": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       }
     },
     "Madeleine": {
       "Saint-Lazare": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       },
       "Pyramides": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       }
     },
     "Pyramides": {
       "Madeleine": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       },
       "Chatelet": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       }
     },
     "Gare de Lyon": {
       "Chatelet": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       },
       "Bercy": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       }
     },
     "Bercy": {
       "Gare de Lyon": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       },
       "cour Saint-Emilion": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       }
     },
     "cour Saint-Emilion": {
       "Bercy": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       },
       "Bibliotheque Francois Mitterand": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       }
     },
     "Bibliotheque Francois Mitterand":{
       "cour Saint-Emilion": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       },
       "Olympiades": {
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       }
     },
     "Olympiades" : {
       "Bibliotheque Francois Mitterand":{
-        "distance": "1"
+        "distance": "1",
+        "ligne": "14"
       }
     }
   },
