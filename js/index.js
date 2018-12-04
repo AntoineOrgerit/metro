@@ -72,19 +72,63 @@ function loadDropdown() {
     });
 }
 
+
+function selectionIsCompleted(stationDep, stationArr) {
+    let error = "";
+
+    if (stationDep !== undefined && stationDep.startsWith("Station")) {
+        error += "StationDep";
+    }
+
+    if (stationArr !== undefined && stationArr.startsWith("Station")) {
+        error += "StationArr";
+    }
+
+    return error;
+}
+
 function loadItinerary() {
     // Récupération des stations concernées par le trajet (nom des stations
     let stationDepName = $("#dropdownDepTitle").text();
     let stationArrName = $("#dropdownArrTitle").text();
 
-    if (stationDepName !== undefined && !stationDepName.startsWith("Station de") &&
-        stationArrName !== undefined && !stationArrName.startsWith("Station de")) {
+    let error = this.selectionIsCompleted(stationDepName, stationArrName);
+    if (error === "") {
         // Récupération des objets correspondant à la station
 
         let stationStart = this.getStation(stationDepName);
         let stationEnd = this.getStation(stationArrName);
         this.addItineary(stationStart, stationEnd);
+
+        let etapes = graph.findShortestPath(stationDepName, stationArrName);
+
+        let stepListElement = $("#stepList");
+        let liHtml = "";
+        let tmp = "";
+        for (var etape in etapes) {
+            if (etape !== 0 && etape !== etapes.length - 1) {
+                tmp =  "<li style='list-style-type: circle'>" + etapes[etape] + "</li>";
+                liHtml = liHtml + tmp;
+            }
+
+        }
+
+        stepListElement.html(liHtml);
+        $("#time").html(etapes.length * 2 - 2 + " min");
+
+        $("#result").css('display', "block");
+
+    } else {
+        let stack ="Impossible de charger l'itinéraire.";
+
+        if (error === "StationDepStationArr") {
+            stack += " Les stations sélectionnées sont incorrectes"
+        } else if (error === "StationDep") {
+            stack += " La station de départ est incorrecte";
+        } else if (error === "StationArr") {
+            stack += " La station de d'arrivée est incorrecte";
+        }
+        M.toast({html: stack});
     }
 
-    //Placer les etapes dans la section dédiées
 }
