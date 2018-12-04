@@ -1,9 +1,30 @@
-$(document).ready(function() {
+$(".dropdown-trigger").dropdown();
+loadStations();
 
- $.getJSON("json/data.json",function (data) {
-    console.log(data);
-     var graph = new Graph(data.ligne);
-     console.log(graph.findShortestPath("Chatelet", 'Rambuteau'));
- });
+let stationsList = {};
 
-});
+/**
+ *
+ */
+function loadStations() {
+    fetch("json/data.json").then(function (response) {
+        return response.text();
+    }).then(function (data) {
+        if (data !== undefined) {
+            var dataReceived = JSON.parse(data);
+            var stations = dataReceived.ligne["11"];
+
+            if (stations !== undefined) {
+                stations = stations[0];
+
+                for (var station in stations) {
+                    if (stationsList[station] === undefined) {
+                        stationsList[station] = {};
+                        stationsList[station].etapes = stations[station];
+                    }
+                }
+            }
+        }
+    });
+}
+

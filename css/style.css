@@ -7,3 +7,17 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+#arrow_downward i {
+    font-size: 2.5em;
+}
+
+#result {
+    display: none;
+}
+
+
+#mapid {
+    height: 300px;
+    margin: 0 10px;
+}
