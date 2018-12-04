@@ -114,7 +114,11 @@ function loadItinerary() {
         }
 
         stepListElement.html(liHtml);
-        $("#time").html(etapes.length * 2 - 2 + " min");
+
+        if (etapes !== null) {
+            $("#time").html(etapes.length * 2 - 2 + " min");
+        }
+
 
         $("#result").css('display', "block");
 
