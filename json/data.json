@@ -1,0 +1,284 @@
+{
+  "graph": {
+    "Chatelet": {
+      "Hotel de Ville": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Gare de Lyon": {
+        "distance": "1",
+        "ligne": "14"
+      }
+    },
+    "Hotel de Ville": {
+      "Chatelet": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Rambuteau": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Rambuteau": {
+      "Hotel de Ville": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Arts et Metier": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Arts et Metier": {
+      "Rambuteau": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Republique": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Republique": {
+      "Arts et Metier": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Goncourt": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Goncourt": {
+      "Republique": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Belleville": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Belleville": {
+      "Goncourt": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Pyrennees": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Pyrennees": {
+      "Belleville": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Jourdain": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Jourdain": {
+      "Pyrennees": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Place des fetes": {
+      "Jourdain": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Telegraphe": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Telegraphe": {
+      "Place des fetes": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Porte des Lilas": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Porte des lilas": {
+      "Telegraphe": {
+        "distance": "1",
+        "ligne": "11"
+      },
+      "Mairie des Lilas": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Mairie des Lilas": {
+      "Porte des Lilas": {
+        "distance": "1",
+        "ligne": "11"
+      }
+    },
+    "Saint-Lazare": {
+      "Madeleine": {
+        "distance": "1",
+        "ligne": "14"
+      }
+    },
+    "Madeleine": {
+      "Saint-Lazare": {
+        "distance": "1",
+        "ligne": "14"
+      },
+      "Pyramides": {
+        "distance": "1",
+        "ligne": "14"
+      }
+    },
+    "Pyramides": {
+      "Madeleine": {
+        "distance": "1",
+        "ligne": "14"
+      },
+      "Chatelet": {
+        "distance": "1",
+        "ligne": "14"
+      }
+    },
+    "Gare de Lyon": {
+      "Chatelet": {
+        "distance": "1",
+        "ligne": "14"
+      },
+      "Bercy": {
+        "distance": "1",
+        "ligne": "14"
+      }
+    },
+    "Bercy": {
+      "Gare de Lyon": {
+        "distance": "1",
+        "ligne": "14"
+      },
+      "cour Saint-Emilion": {
+        "distance": "1",
+        "ligne": "14"
+      }
+    },
+    "cour Saint-Emilion": {
+      "Bercy": {
+        "distance": "1",
+        "ligne": "14"
+      },
+      "Bibliotheque Francois Mitterand": {
+        "distance": "1",
+        "ligne": "14"
+      }
+    },
+    "Bibliotheque Francois Mitterand":{
+      "cour Saint-Emilion": {
+        "distance": "1",
+        "ligne": "14"
+      },
+      "Olympiades": {
+        "distance": "1",
+        "ligne": "14"
+      }
+    },
+    "Olympiades" : {
+      "Bibliotheque Francois Mitterand":{
+        "distance": "1",
+        "ligne": "14"
+      }
+    }
+  },
+  "stations": {
+    "Hotel de Ville": {
+      "lat": "48.858752",
+      "lng": "2.347447"
+    },
+    "Rambuteau": {
+      "lat": "48.862472",
+      "lng": "2.353960"
+    },
+    "Chatelet": {
+      "lat": "48.857586",
+      "lng": "2.352315"
+    },
+    "Arts et Metier": {
+      "lat": "48.865655",
+      "lng": "2.356052"
+    },
+    "Republique": {
+      "lat": "48.867242",
+      "lng": "2.364818"
+    },
+    "Goncourt": {
+      "lat": "48.870293",
+      "lng": "2.371158"
+    },
+    "Belleville": {
+      "lat": "48.872227",
+      "lng": "2.376984"
+    },
+    "Pyrennees": {
+      "lat": "48.874001",
+      "lng": "2.385257"
+    },
+    "Jourdain": {
+      "lat": "48.875255",
+      "lng": "2.389348"
+    },
+    "Telegraphe": {
+      "lat": "48.875639",
+      "lng": "2.398947"
+    },
+    "Porte des Lilas": {
+      "lat": "48.877084",
+      "lng": "2.406787"
+    },
+    "Place des fetes": {
+      "lat": "48.876815",
+      "lng": "2.392757"
+    },
+    "Mairie des Lilas": {
+      "lat": "48.879936",
+      "lng": "2.416297"
+    },
+    "Bibliotheque Francois Mitterand": {
+      "lat": "48.8833452",
+      "lng": "2.4079418000000032"
+    },
+    "Olympiades": {
+      "lat": "48.82690669999999",
+      "lng": "2.3663825999999517"
+    },
+    "cour Saint-Emilion": {
+      "lat": "48.8332109",
+      "lng": "2.3867096000000174"
+    },
+    "Bercy": {
+      "lat": "48.835455",
+      "lng": "2.3856832000000168"
+    },
+    "Gare de Lyon": {
+      "lat": "48.84430380000001",
+      "lng": "2.374377299999992"
+    },
+    "Pyramides": {
+      "lat": "48.865724",
+      "lng": "2.3344271999999364"
+    },
+    "Madeleine": {
+      "lat": "48.87058709999999",
+      "lng": "2.318943200000035"
+    },
+    "Saint-Lazare": {
+      "lat": "48.8763009",
+      "lng": "2.3254024999999956"
+    }
+  }
+}
