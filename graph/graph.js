@@ -77,6 +77,8 @@ var Graph = (function (undefined) {
 		return nodes;
 	}
 
+
+	//nodes = [start, end]
 	var findShortestPath = function (map, nodes) {
 		var start = nodes.shift(),
 		    end,
@@ -101,7 +103,7 @@ var Graph = (function (undefined) {
 
 			start = end;
 		}
-	}
+	};
 
 	var toArray = function (list, offset) {
 		try {
@@ -120,14 +122,16 @@ var Graph = (function (undefined) {
 	}
 
 	Graph.prototype.findShortestPath = function (start, end) {
+
+		var _map = this.map.graph;
 		if (Object.prototype.toString.call(start) === '[object Array]') {
-			return findShortestPath(this.map, start);
+			return findShortestPath(_map, start);
 		} else if (arguments.length === 2) {
-			return findShortestPath(this.map, [start, end]);
+			return findShortestPath(_map, [start, end]);
 		} else {
-			return findShortestPath(this.map, toArray(arguments));
+			return findShortestPath(_map, toArray(arguments));
 		}
-	}
+	};
 
 	Graph.findShortestPath = function (map, start, end) {
 		if (Object.prototype.toString.call(start) === '[object Array]') {
