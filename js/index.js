@@ -1,4 +1,5 @@
 $(".dropdown-trigger").dropdown();
+loadStations();
 
 let stationsList = {};
 
@@ -17,7 +18,7 @@ function loadStations() {
                 stations = stations[0];
 
                 for (var station in stations) {
-                    if (stationsList[] === undefined) {
+                    if (stationsList[station] === undefined) {
                         stationsList[station] = {};
                         stationsList[station].etapes = stations[station];
                     }
@@ -26,8 +27,4 @@ function loadStations() {
         }
     });
 }
-
-
-
-loadStations();
 
