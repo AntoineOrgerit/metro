@@ -15,34 +15,35 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>INDEX</title>
 </head>
-<body>
+<body class="blue-grey lighten-5">
+<!-- HEADER -->
 <nav>
-    <!-- HEADER -->
     <div class="nav-wrapper">
         <a href="#" class="brand-logo center">RECHERCHER</a>
         </ul>
     </div>
 </nav>
 
+<!-- Formulaire pour les champs de recherche -->
 <div class="row">
     <form class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <input placeholder="Station de départ" id="ville_dep" type="text" class="validate">
+                <input placeholder="Ville de départ" id="ville_dep" type="text" class="validate">
                 <label for="ville_dep"></label>
             </div>
         </div>
-
         <div class="row">
             <div class="input-field col s12">
-                <input placeholder="Station d'arrivée" id="ville_arr" type="text" class="validate">
+                <input placeholder="Ville d'arrivée" id="ville_arr" type="text" class="validate">
                 <label for="ville_arr"></label>
             </div>
         </div>
-
-        <button onclick="loadData()">Search</button>
     </form>
 </div>
+
+<!-- Bouton valider formulaire -->
+<p class="waves-effect waves-light btn" style="margin-left: 35%;">Rechercher !</p>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
