@@ -1,5 +1,6 @@
 let stationsList = {};
 let stationsLoadedEvent = new Event("stationsLoaded");
+let graph;
 
 $(document).ready(init);
 
@@ -19,12 +20,15 @@ function loadStations() {
     fetch("json/data.json").then(function (response) {
         return response.text();
     }).then(function (data) {
+        // init du graphe
+        var dataReceived = JSON.parse(data);
+        graph = new Graph(dataReceived);
+        console.log(graph.findShortestPath("Chatelet", 'Rambuteau'));
+
         if (data !== undefined) {
-            var dataReceived = JSON.parse(data);
-            var stations = dataReceived.ligne["11"];
+            var stations = dataReceived.graph;
 
             if (stations !== undefined) {
-                stations = stations[0];
 
                 for (var station in stations) {
                     if (stationsList[station] === undefined) {
