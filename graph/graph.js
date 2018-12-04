@@ -1,30 +1,30 @@
-var Graph = (function (undefined) {
+const Graph = (function (param) {
 
-	var extractKeys = function (obj) {
-		var keys = [], key;
+	let extractKeys = function (obj) {
+		let keys = [], key;
 		for (key in obj) {
 		    Object.prototype.hasOwnProperty.call(obj,key) && keys.push(key);
 		}
 		return keys;
-	}
+	};
 
-	var sorter = function (a, b) {
+	let sorter = function (a, b) {
 		return parseFloat (a) - parseFloat (b);
-	}
+	};
 
-	var findPaths = function (map, start, end, infinity) {
+	let findPaths = function (map, start, end, infinity) {
 		infinity = infinity || Infinity;
 
-		var costs = {},
+		let costs = {},
 		    open = {'0': [start]},
 		    predecessors = {},
 		    keys;
 
-		var addToOpen = function (cost, vertex) {
+		let addToOpen = function (cost, vertex) {
 			var key = "" + cost;
 			if (!open[key]) open[key] = [];
 			open[key].push(vertex);
-		}
+		};
 
 		costs[start] = 0;
 
@@ -33,7 +33,7 @@ var Graph = (function (undefined) {
 
 			keys.sort(sorter);
 
-			var key = keys[0],
+			let key = keys[0],
 			    bucket = open[key],
 			    node = bucket.shift(),
 			    currentCost = parseFloat(key),
@@ -41,13 +41,13 @@ var Graph = (function (undefined) {
 
 			if (!bucket.length) delete open[key];
 
-			for (var vertex in adjacentNodes) {
+			for (let vertex in adjacentNodes) {
 			    if (Object.prototype.hasOwnProperty.call(adjacentNodes, vertex)) {
-					var cost = adjacentNodes[vertex],
+					let cost = adjacentNodes[vertex],
 					    totalCost = cost + currentCost,
 					    vertexCost = costs[vertex];
 
-					if ((vertexCost === undefined) || (vertexCost > totalCost)) {
+					if ((vertexCost === param) || (vertexCost > totalCost)) {
 						costs[vertex] = totalCost;
 						addToOpen(totalCost, vertex);
 						predecessors[vertex] = node;
@@ -56,31 +56,31 @@ var Graph = (function (undefined) {
 			}
 		}
 
-		if (costs[end] === undefined) {
+		if (costs[end] === param) {
 			return null;
 		} else {
 			return predecessors;
 		}
 
-	}
+	};
 
-	var extractShortest = function (predecessors, end) {
-		var nodes = [],
+	let extractShortest = function (predecessors, end) {
+		let nodes = [],
 		    u = end;
 
-		while (u !== undefined) {
+		while (u !== param) {
 			nodes.push(u);
 			u = predecessors[u];
 		}
 
 		nodes.reverse();
 		return nodes;
-	}
+	};
 
 
 	//nodes = [start, end]
-	var findShortestPath = function (map, nodes) {
-		var start = nodes.shift(),
+	let findShortestPath = function (map, nodes) {
+		let start = nodes.shift(),
 		    end,
 		    predecessors,
 		    path = [],
@@ -105,25 +105,25 @@ var Graph = (function (undefined) {
 		}
 	};
 
-	var toArray = function (list, offset) {
+	let toArray = function (list, offset) {
 		try {
 			return Array.prototype.slice.call(list, offset);
 		} catch (e) {
-			var a = [];
-			for (var i = offset || 0, l = list.length; i < l; ++i) {
+			let a = [];
+			for (let i = offset || 0, l = list.length; i < l; ++i) {
 				a.push(list[i]);
 			}
 			return a;
 		}
-	}
+	};
 
-	var Graph = function (map) {
+	let Graph = function (map) {
 		this.map = map;
-	}
+	};
 
 	Graph.prototype.findShortestPath = function (start, end) {
 
-		var _map = this.map.graph;
+		let _map = this.map.graph;
 		if (Object.prototype.toString.call(start) === '[object Array]') {
 			return findShortestPath(_map, start);
 		} else if (arguments.length === 2) {
@@ -141,7 +141,7 @@ var Graph = (function (undefined) {
 		} else {
 			return findShortestPath(map, toArray(arguments, 1));
 		}
-	}
+	};
 
 	return Graph;
 
