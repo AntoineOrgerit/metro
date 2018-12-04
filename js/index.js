@@ -13,6 +13,10 @@ function init() {
     loadDropdown();
 }
 
+function getStation(stationName) {
+    return stationsList[stationName];
+}
+
 /**
  *
  */
@@ -23,17 +27,14 @@ function loadStations() {
         // init du graphe
         var dataReceived = JSON.parse(data);
         graph = new Graph(dataReceived);
-        console.log(graph.findShortestPath("Chatelet", 'Rambuteau'));
 
         if (data !== undefined) {
-            var stations = dataReceived.graph;
+            var stations = dataReceived.stations;
 
             if (stations !== undefined) {
-
                 for (var station in stations) {
                     if (stationsList[station] === undefined) {
-                        stationsList[station] = {};
-                        stationsList[station].etapes = stations[station];
+                        stationsList[station] = stations[station];
                     }
                 }
             }

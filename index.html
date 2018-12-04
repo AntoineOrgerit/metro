@@ -112,9 +112,20 @@
 <script src="graph/graph.js"></script>
 <script src="js/map.js"></script>
 <script>
-
     function loadItinerary() {
-        this.addItineary();
+        // Récupération des stations concernées par le trajet (nom des stations
+        let stationDepName = $("#dropdownDepTitle").text();
+        let stationArrName = $("#dropdownArrTitle").text();
+
+        if (stationDepName !== undefined && !stationDepName.startsWith("Station de") &&
+            stationArrName !== undefined && !stationArrName.startsWith("Station de")) {
+            // Récupération des objets correspondant à la station
+
+            let stationStart = this.getStation(stationDepName);
+            let stationEnd = this.getStation(stationArrName);
+            this.addItineary(stationStart, stationEnd);
+        }
+
     }
 
 </script>
