@@ -1,7 +1,6 @@
 {
   "ligne": {
-    "11": [
-      {
+    "11": {
         "Chatelet": {
           "Hotel de Ville": {
             "distance": "1",
@@ -101,6 +100,5 @@
           }
         }
       }
-    ]
   }
 }
