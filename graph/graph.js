@@ -76,6 +76,7 @@ var Graph = (function (undefined) {
 		nodes.reverse();
 		return nodes;
 	}
+	}
 
 	//nodes = [start, end]
 	var findShortestPath = function (map, nodes) {
@@ -121,6 +122,18 @@ var Graph = (function (undefined) {
 	}
 
 	Graph.prototype.findShortestPath = function (start, end) {
+	var chemins = [];
+	this.map.forEach(function (_map) {
+
+		var chemin = findShortestPath(_map, [start, end]);
+		if (chemin) {
+			chemins.push(chemin);
+		}
+ 	});
+
+	// traitement chemins
+	//	...
+	/**
 		if (Object.prototype.toString.call(start) === '[object Array]') {
 			return findShortestPath(this.map, start);
 		} else if (arguments.length === 2) {
@@ -128,6 +141,8 @@ var Graph = (function (undefined) {
 		} else {
 			return findShortestPath(this.map, toArray(arguments));
 		}
+	 **/
+		return chemins[0];
 	}
 
 	Graph.findShortestPath = function (map, start, end) {
