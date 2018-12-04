@@ -32,11 +32,9 @@ function loadStations() {
             var stations = dataReceived.stations;
 
             if (stations !== undefined) {
-                for (var station in stations) {
-                    if (stationsList[station] === undefined) {
-                        stationsList[station] = stations[station];
-                    }
-                }
+                Object.keys(stations).sort().forEach(function(key) {
+                    stationsList[key] = stations[key];
+                });
             }
         }
         document.dispatchEvent(stationsLoadedEvent);
@@ -105,34 +103,37 @@ function loadItinerary() {
         let stepListElement = $("#stepList");
         let liHtml = "";
         let tmp = "";
-        for (var i =0;i<etapes.length;i++) {
-            if (i !== 0 && i !== etapes.length - 1) {
-                tmp =  "<li style='list-style-type: circle'>" + etapes[i] + "</li>";
-                liHtml = liHtml + tmp;
-            }
-
-        }
-
-        stepListElement.html(liHtml);
 
         if (etapes !== null) {
-            $("#time").html(etapes.length * 2 - 2 + " min");
+            for (var i = 0; i < etapes.length; i++) {
+                if (i !== 0 && i !== etapes.length - 1) {
+                    tmp = "<li style='list-style-type: circle'>" + etapes[i] + "</li>";
+                    liHtml = liHtml + tmp;
+                }
+
+            }
+
+            stepListElement.html(liHtml);
+
+            if (etapes !== null) {
+                $("#time").html(etapes.length * 2 - 2 + " min");
+            }
+
+
+            $("#result").css('display', "block");
+
+        } else {
+            let stack = "Impossible de charger l'itinéraire.";
+
+            if (error === "StationDepStationArr") {
+                stack += " Les stations sélectionnées sont incorrectes"
+            } else if (error === "StationDep") {
+                stack += " La station de départ est incorrecte";
+            } else if (error === "StationArr") {
+                stack += " La station de d'arrivée est incorrecte";
+            }
+            M.toast({html: stack});
         }
 
-
-        $("#result").css('display', "block");
-
-    } else {
-        let stack ="Impossible de charger l'itinéraire.";
-
-        if (error === "StationDepStationArr") {
-            stack += " Les stations sélectionnées sont incorrectes"
-        } else if (error === "StationDep") {
-            stack += " La station de départ est incorrecte";
-        } else if (error === "StationArr") {
-            stack += " La station de d'arrivée est incorrecte";
-        }
-        M.toast({html: stack});
     }
-
 }
