@@ -56,14 +56,35 @@ function loadDropdown() {
     $("#dropdownArr").html(ulHtml);
 
     //Tap sur le dropdown de depart
-    $("#dropdownDep .dropdownItem").click(function() {
+    $("#dropdownDep .dropdownItem").click(function () {
         let element = $(this).children();
-        $("#dropdownDepTitle").html(element.text());
+        let stationName = element.text();
+        $("#dropdownDepTitle").html(stationName);
+        $("#station_dep").html(stationName);
     });
 
     //Tap sur le dropdown d'arrivee
-    $("#dropdownArr .dropdownItem").click(function() {
+    $("#dropdownArr .dropdownItem").click(function () {
         let element = $(this).children();
-        $("#dropdownArrTitle").html(element.text());
+        let stationName = element.text();
+        $("#dropdownArrTitle").html(stationName);
+        $("#station_arr").html(stationName);
     });
+}
+
+function loadItinerary() {
+    // Récupération des stations concernées par le trajet (nom des stations
+    let stationDepName = $("#dropdownDepTitle").text();
+    let stationArrName = $("#dropdownArrTitle").text();
+
+    if (stationDepName !== undefined && !stationDepName.startsWith("Station de") &&
+        stationArrName !== undefined && !stationArrName.startsWith("Station de")) {
+        // Récupération des objets correspondant à la station
+
+        let stationStart = this.getStation(stationDepName);
+        let stationEnd = this.getStation(stationArrName);
+        this.addItineary(stationStart, stationEnd);
+    }
+
+    //Placer les etapes dans la section dédiées
 }

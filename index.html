@@ -68,13 +68,13 @@
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                     <span class="card-title">Résultats</span>
-                    <p>Station départ : <span id="station_dep">Gare St Lazare</span></p>
+                    <p>Station départ : <span id="station_dep"></span></p>
                     <div>Étapes :
                         <ul id="stepList">
                             <li style="list-style-type: circle">TEST</li>
                         </ul>
                     </div>
-                    <p>Station arrivée : <span id="station_arr">Gare de l'Est</span></p>
+                    <p>Station arrivée : <span id="station_arr"></span></p>
                     <p>Temps : 15min</p>
                 </div>
             </div>
@@ -111,22 +111,4 @@
 <script src="js/index.js"></script>
 <script src="graph/graph.js"></script>
 <script src="js/map.js"></script>
-<script>
-    function loadItinerary() {
-        // Récupération des stations concernées par le trajet (nom des stations
-        let stationDepName = $("#dropdownDepTitle").text();
-        let stationArrName = $("#dropdownArrTitle").text();
-
-        if (stationDepName !== undefined && !stationDepName.startsWith("Station de") &&
-            stationArrName !== undefined && !stationArrName.startsWith("Station de")) {
-            // Récupération des objets correspondant à la station
-
-            let stationStart = this.getStation(stationDepName);
-            let stationEnd = this.getStation(stationArrName);
-            this.addItineary(stationStart, stationEnd);
-        }
-
-    }
-
-</script>
 </html>

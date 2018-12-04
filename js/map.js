@@ -1,5 +1,5 @@
 // Init de la map
-let mymap = L.map('mapid').setView([51.505, -0.09], 13);
+let mymap = L.map('mapid').setView([48.8590, 2.3470], 13);
 let polyline;
 // let mymap = L.map('mapid');
 
