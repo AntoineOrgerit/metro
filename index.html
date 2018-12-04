@@ -28,18 +28,32 @@
     <form class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <input placeholder="Ville de départ" id="ville_dep" type="text" class="validate">
+                <input placeholder="Station de départ" id="ville_dep" type="text" class="validate">
                 <label for="ville_dep"></label>
             </div>
         </div>
+
         <div class="row">
             <div class="input-field col s12">
-                <input placeholder="Ville d'arrivée" id="ville_arr" type="text" class="validate">
+                <input placeholder="Station d'arrivée" id="ville_arr" type="text" class="validate">
                 <label for="ville_arr"></label>
             </div>
         </div>
+
+        <button onclick="loadData()">Search</button>
     </form>
 </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script>
+    fetch("data.json").then(function (response) {
+        return response.text();
+
+    }).then(function (data) {
+        console.log(data);
+    });
+</script>
 </html>
