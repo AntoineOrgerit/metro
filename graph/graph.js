@@ -76,7 +76,7 @@ var Graph = (function (undefined) {
 		nodes.reverse();
 		return nodes;
 	}
-	}
+
 
 	//nodes = [start, end]
 	var findShortestPath = function (map, nodes) {
