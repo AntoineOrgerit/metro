@@ -18,62 +18,73 @@
 <body class="grey lighten-3">
 <!-- HEADER -->
 <nav>
-    <div class="nav-wrapper red lighten-1">
+    <div class="nav-wrapper red darken-4">
         <a href="#" class="brand-logo center">RECHERCHER</a>
         </ul>
     </div>
 </nav>
 
-<!-- Formulaire pour les champs de recherche -->
-<div class="row">
-    <div class=""></div>
-</div>
+<main>
+    <!-- Formulaire pour les champs de recherche -->
+    <div class="column" style="margin-top: 10%;">
+        <div class="row">
+            <div class="col s12">
+                <ul id="dropdownDep" class="dropdown-content">
+                    <li><a href="#!">one</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="#!">two</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="#!">three</a></li>
+                </ul>
+                <a class="btn dropdown-trigger col s12 red darken-1" href="#!" data-target="dropdownDep">Station de
+                    départ</a>
+            </div>
+        </div>
 
-<!--<div class="row" style="margin-top: 10%;">
-    <div class="col s6">
-        <ul id="dropdownDep" class="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li class="divider" tabindex="-1"></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider" tabindex="-1"></li>
-            <li><a href="#!">three</a></li>
-        </ul>
-        <a class="btn dropdown-trigger" href="#!" data-target="dropdownDep">Station de départ</a>
-    </div>
-
-    <div class="col s6">
-        <ul id="dropdownArr" class="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li class="divider" tabindex="-1"></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider" tabindex="-1"></li>
-            <li><a href="#!">three</a></li>
-        </ul>
-        <a class="btn dropdown-trigger" href="#!" data-target="dropdownArr">Station d'arrivée</a>
-    </div>
-</div>-->
-
-<!-- Bouton valider formulaire -->
-<!--<p class="waves-effect waves-light btn red lighten-2" style="margin-left: 35%;" onclick="t()">Rechercher !</p>-->
-
-<!-- Resultat -->
-<div class="row">
-    <div class="col s12 m6">
-        <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-                <span class="card-title">Résultats</span>
-                <p>Station départ : <span id="station_dep">Gare St Lazare</span></p>
-                <p>Station arrivée : <span id="station_arr">Gare de l'Est</span></p>
-                <p>Temps : 15min</p>
+        <div class="row">
+            <div class="col s12">
+                <ul id="dropdownArr" class="dropdown-content">
+                    <li><a href="#!">one</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="#!">two</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="#!">three</a></li>
+                </ul>
+                <a class="btn dropdown-trigger col s12 red darken-1" href="#!" data-target="dropdownArr">Station
+                    d'arrivée</a>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Carte -->
-<div class="row">
+    <!-- Bouton valider formulaire -->
+    <p class="waves-effect waves-light btn red lighten-2" style="margin-left: 35%;">Rechercher !</p>
 
-</div>
+    <!-- Resultat -->
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Résultats</span>
+                    <p>Station départ : <span id="station_dep">Gare St Lazare</span></p>
+                    <p>Station arrivée : <span id="station_arr">Gare de l'Est</span></p>
+                    <p>Temps : 15min</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carte -->
+    <div class="row">
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="red darken-4 center" style="color:white;">
+        © 2018 Métro
+    </div>
+</footer>
 
 </body>
 <!-- JQuery -->
