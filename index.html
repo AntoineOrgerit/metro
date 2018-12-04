@@ -15,10 +15,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>INDEX</title>
 </head>
-<body class="blue-grey lighten-5">
+<body class="grey lighten-3">
 <!-- HEADER -->
 <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper red lighten-1">
         <a href="#" class="brand-logo center">RECHERCHER</a>
         </ul>
     </div>
@@ -26,29 +26,65 @@
 
 <!-- Formulaire pour les champs de recherche -->
 <div class="row">
-    <form class="col s12">
-        <div class="row">
-            <div class="input-field col s12">
-                <input placeholder="Ville de départ" id="ville_dep" type="text" class="validate">
-                <label for="ville_dep"></label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input placeholder="Ville d'arrivée" id="ville_arr" type="text" class="validate">
-                <label for="ville_arr"></label>
-            </div>
-        </div>
-    </form>
+    <div class=""></div>
 </div>
 
+<!--<div class="row" style="margin-top: 10%;">
+    <div class="col s6">
+        <ul id="dropdownDep" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+        <a class="btn dropdown-trigger" href="#!" data-target="dropdownDep">Station de départ</a>
+    </div>
+
+    <div class="col s6">
+        <ul id="dropdownArr" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+        <a class="btn dropdown-trigger" href="#!" data-target="dropdownArr">Station d'arrivée</a>
+    </div>
+</div>-->
+
 <!-- Bouton valider formulaire -->
-<p class="waves-effect waves-light btn" style="margin-left: 35%;">Rechercher !</p>
+<!--<p class="waves-effect waves-light btn red lighten-2" style="margin-left: 35%;" onclick="t()">Rechercher !</p>-->
+
+<!-- Resultat -->
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">Résultats</span>
+                <p>Station départ : <span id="station_dep">Gare St Lazare</span></p>
+                <p>Station arrivée : <span id="station_arr">Gare de l'Est</span></p>
+                <p>Temps : 15min</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carte -->
+<div class="row">
+
+</div>
 
 </body>
+<!-- JQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    $(".dropdown-trigger").dropdown();
+</script>
 <script>
     fetch("data.json").then(function (response) {
         return response.text();
@@ -56,5 +92,9 @@
     }).then(function (data) {
         console.log(data);
     });
+
+    function t() {
+        $(".r").css("display", "block");
+    }
 </script>
 </html>
